@@ -1,0 +1,10 @@
+.mt-40 {
+    margin-top: 40px !important;
+}
+ol, ul {
+    list-style: none;
+}
+.menu-tags {
+    text-align: center;
+    margin-bottom: 20px;
+}
