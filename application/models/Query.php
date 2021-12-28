@@ -32,7 +32,9 @@ class Query extends CI_Model{
 
     public function fetchMenuByServiceIdAndType($id, $type){
         $this->db->select('*');
-        $query = $this->db->get_where('menu', array('service_category' => $id, 'category' => $type));
+        $this->db->from('menu');
+        $this->db->where('service_category="'.$id.'" and (category="'.$type.'" or category="both")');
+        $query = $this->db->get();
         return $query->result();
     }
 
